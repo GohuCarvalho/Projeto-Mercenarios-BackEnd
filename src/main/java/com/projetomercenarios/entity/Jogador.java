@@ -3,43 +3,31 @@ package com.projetomercenarios.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "jogador")
+@Table(name = "jogador")
 public class Jogador {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, length = 100)
     private String nome;
-    @Column
+
+    @Column(length = 50)
     private String apelido;
-    @Column
+
+    @Column(length = 20)
     private String telefone;
-    @Column
-    private String Email;
 
-    public String getEmail() {
-        return Email;
+    @Column(nullable = false, length = 100, unique = true)
+    private String email;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getApelido() {
-        return apelido;
-    }
-
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -50,11 +38,30 @@ public class Jogador {
         this.nome = nome;
     }
 
-    public long getId() {
-        return id;
+    public String getApelido() {
+        return apelido;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
+
+
+
