@@ -34,7 +34,27 @@ public class PresencaJogo {
 
         private Integer pontosCalculados;
 
-        public Long getId() {
+
+        private Integer gols = 0;
+        private Integer assistencias = 0;
+
+    public Integer getGols() {
+        return gols;
+    }
+
+    public void setGols(Integer gols) {
+        this.gols = gols;
+    }
+
+    public Integer getAssistencias() {
+        return assistencias;
+    }
+
+    public void setAssistencias(Integer assistencias) {
+        this.assistencias = assistencias;
+    }
+
+    public Long getId() {
                 return id;
         }
 
