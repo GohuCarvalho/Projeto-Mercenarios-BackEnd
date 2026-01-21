@@ -22,8 +22,8 @@ public class PartidaController {
     }
 
     @GetMapping("/{id}")
-    public List<Partida> listarTodasPartidas() {
-        return partidaService.listarTodasPartidas();
+    public Partida listarPartidaId(@PathVariable Long id) {
+        return partidaService.ListarPartida(id);
     }
 
     @PostMapping
@@ -31,5 +31,7 @@ public class PartidaController {
     public ResponseEntity<Partida> criar(@RequestBody Partida partida) {
         return ResponseEntity.ok(partidaService.inserir(partida));
     }
+
+    
 
 }

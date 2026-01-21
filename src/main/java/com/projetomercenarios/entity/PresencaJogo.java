@@ -29,8 +29,8 @@ public class PresencaJogo {
         @Column(nullable = false)
         private TipoPresencaEnum tipoPresenca;
 
-        private boolean apitou;
-        private boolean agarrou;
+        private Boolean apitou;
+        private Boolean agarrou;
 
         private Integer pontosCalculados;
 
@@ -86,17 +86,19 @@ public class PresencaJogo {
                 this.tipoPresenca = tipoPresenca;
         }
 
-        public boolean isApitou() {
-                return apitou;
-        }
+    public Boolean getApitou() {
+        return apitou;
+    }
 
-        public void setApitou(boolean apitou) {
+    public Boolean getAgarrou() {
+        return agarrou;
+    }
+
+    public void setApitou(boolean apitou) {
                 this.apitou = apitou;
         }
 
-        public boolean isAgarrou() {
-                return agarrou;
-        }
+
 
         public void setAgarrou(boolean agarrou) {
                 this.agarrou = agarrou;
